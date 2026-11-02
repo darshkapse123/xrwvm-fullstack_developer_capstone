@@ -1,0 +1,95 @@
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 222, in _get_response
+    response = response.render()
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: Home.html
+[02/Nov/2026 12:33:53] "GET / HTTP/1.1" 500 77225
+Not Found: /favicon.ico
+[02/Nov/2026 12:33:53] "GET /favicon.ico HTTP/1.1" 404 2773
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 222, in _get_response
+    response = response.render()
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: Home.html
+[02/Nov/2026 12:34:21] "GET /?utm_source=chatgpt.com HTTP/1.1" 500 76779
+Not Found: /favicon.ico
+[02/Nov/2026 12:34:21] "GET /favicon.ico HTTP/1.1" 404 2773
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 222, in _get_response
+    response = response.render()
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: Home.html
+[02/Nov/2026 12:34:29] "GET /?utm_source=chatgpt.com HTTP/1.1" 500 77516
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 222, in _get_response
+    response = response.render()
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/.venv/lib/python3.13/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: Home.html
+[02/Nov/2026 12:34:32] "GET /?utm_source=chatgpt.com HTTP/1.1" 500 77516
+/Users/darsh/Downloads/xrwvm-fullstack_developer_capstone/server/djangoproj/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 02, 2026 - 12:33:39
+Django version 6.1.2, using settings 'djangoproj.settings'
+Starting WSGI development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.1/howto/deployment/
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 02, 2026 - 12:40:07
+Django version 6.1.2, using settings 'djangoproj.settings'
+Starting WSGI development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.1/howto/deployment/
