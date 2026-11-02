@@ -1,25 +1,420 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact Us - Dealerships</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #f4f8fb;
+            font-family: Arial, sans-serif;
+            color: #263238;
+        }
+
+        .navbar {
+            background-color: darkturquoise;
+        }
+
+        .navbar-brand {
+            font-size: 23px;
+            font-weight: bold;
+            color: #083344 !important;
+        }
+
+        .nav-link {
+            color: #083344 !important;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .nav-link.active {
+            color: white !important;
+            border-bottom: 2px solid white;
+        }
+
+        .contact-hero {
+            background: linear-gradient(135deg, #d5ffff, #ffffff);
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-weight: bold;
+            color: #123c46;
+        }
+
+        .contact-hero p {
+            max-width: 750px;
+            margin: 15px auto;
+            line-height: 1.8;
+        }
+
+        .contact-card {
+            background: white;
+            border: none;
+            border-radius: 14px;
+            padding: 30px 20px;
+            height: 100%;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .contact-icon {
+            font-size: 38px;
+            color: #078b99;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h5 {
+            color: #123c46;
+            font-weight: bold;
+        }
+
+        .contact-card a {
+            color: #087f8c;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-image {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .contact-info {
+            background-color: white;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+        }
+
+        .back-button {
+            background-color: darkturquoise;
+            border: none;
+            color: #083344;
+            font-weight: bold;
+            padding: 11px 25px;
+        }
+
+        .back-button:hover {
+            background-color: #20b2aa;
+            color: white;
+        }
+
+        footer {
+            background-color: #123c46;
+            color: white;
+            padding: 25px 10px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-light" style="background-color: darkturquoise;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Dealerships</a>
-            <a class="nav-link" href="/">Home</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Dealerships
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/static/About.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="/static/Contact.html">
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <h1>Contact Us</h1>
-        <p>We would love to hear from you.</p>
-        <p>For assistance with our dealership platform, please contact our support team.</p>
-        <a href="/" class="btn btn-info">Back to Home</a>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+
+        <div class="container">
+
+            <h1 class="display-4">Contact Us</h1>
+
+            <p class="lead">
+                We'd love to hear from you!
+            </p>
+
+            <p>
+                Have questions about our dealership platform?
+                Need assistance finding dealership locations or
+                exploring customer reviews? Get in touch with us.
+                We're here to help make your experience easier.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Details -->
+    <section class="container my-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Get In Touch</h2>
+
+            <p class="text-muted">
+                Reach out to us using the contact information below.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Email -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+
+                    <h5>Email Support</h5>
+
+                    <p class="text-muted">
+                        Send us your questions and feedback.
+                    </p>
+
+                    <a href="mailto:darshkapse006@gmail.com">
+                        darshkapse006@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Platform -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-car-front-fill"></i>
+                    </div>
+
+                    <h5>Dealership Platform</h5>
+
+                    <p class="text-muted">
+                        Explore dealership branches and information
+                        across the United States.
+                    </p>
+
+                    <a href="/">
+                        Visit Our Platform
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Support -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+
+                    <h5>Customer Assistance</h5>
+
+                    <p class="text-muted">
+                        Contact us for help with dealership information,
+                        locations, and customer reviews.
+                    </p>
+
+                    <a href="mailto:darshkapse006@gmail.com">
+                        Contact Support
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Information and Image -->
+    <section class="container my-5">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1000"
+                    alt="Modern car displayed at a dealership"
+                    class="contact-image">
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="contact-info">
+
+                    <h2 class="fw-bold mb-4">
+                        How Can We Help?
+                    </h2>
+
+                    <p class="text-muted">
+                        Our Cars Dealerships platform helps users
+                        discover dealership locations, explore
+                        available information, and read customer reviews.
+                    </p>
+
+                    <hr>
+
+                    <h5 class="fw-bold">
+                        <i class="bi bi-envelope text-info"></i>
+                        Contact Email
+                    </h5>
+
+                    <p>
+                        <a class="text-decoration-none"
+                           href="mailto:darshkapse006@gmail.com">
+                            darshkapse006@gmail.com
+                        </a>
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                        <i class="bi bi-globe text-info"></i>
+                        Service Coverage
+                    </h5>
+
+                    <p class="text-muted">
+                        Dealership information and locations
+                        across the United States.
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                        <i class="bi bi-clock text-info"></i>
+                        Support Availability
+                    </h5>
+
+                    <p class="text-muted">
+                        Send us an email anytime. We will respond
+                        as soon as possible.
+                    </p>
+
+                    <a href="mailto:darshkapse006@gmail.com"
+                       class="btn back-button mt-3">
+                        <i class="bi bi-send"></i>
+                        Send an Email
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Back to Home -->
+    <div class="text-center mb-5">
+
+        <a href="/" class="btn back-button">
+            Back to Home
+        </a>
+
     </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+
+            <h5>Dealerships Platform</h5>
+
+            <p class="mb-1">
+                Your destination for discovering car dealerships.
+            </p>
+
+            <p class="mb-0">
+                &copy; 2026 Dealerships Platform. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
 </html>
