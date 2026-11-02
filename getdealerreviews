@@ -1,0 +1,9 @@
+Task 8: Get Dealer Reviews
+
+cURL Command:
+
+curl http://127.0.0.1:8000/djangoapp/reviews/1
+
+Output:
+
+[{"_id":"6ae8f59ce7dea9bc54ed6ee2","id":51,"name":"Test User","dealership":1,"review":"Amazing experience, excellent service and very helpful staff.","sentiment":"positive","purchase":true,"purchase_date":"2026-11-03","car_make":"Toyota","car_model":"Camry","car_year":2023,"__v":0}]
