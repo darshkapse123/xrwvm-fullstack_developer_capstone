@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Deployment and local secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies
+node_modules/
+
+# Local session cookies
+cookies.txt
+
+# Unused root-level route fragment
+/app.js

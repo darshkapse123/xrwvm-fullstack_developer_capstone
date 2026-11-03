@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 const fs = require('fs');
@@ -6,7 +5,7 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express();
-const port = 3030;
+const port = process.env.PORT || 3030;
 
 app.use(cors());
 app.use(express.json());
@@ -23,30 +22,43 @@ const dealerships_data = JSON.parse(
 const Reviews = require('./review');
 const Dealerships = require('./dealership');
 
-// Connect to MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/dealershipsDB")
-    .then(async () => {
-        console.log("MongoDB connected successfully");
+// Connect to MongoDB using the hosting environment variable.
+const mongoURI = process.env.MONGODB_URI;
 
-        try {
-            await Reviews.deleteMany({});
-            await Reviews.insertMany(reviews_data['reviews']);
+if (!mongoURI) {
+    console.error('MONGODB_URI environment variable is missing.');
+    process.exit(1);
+}
 
-            await Dealerships.deleteMany({});
-            await Dealerships.insertMany(dealerships_data['dealerships']);
+async function startServer() {
+    try {
+        await mongoose.connect(mongoURI);
+        console.log('MongoDB connected successfully');
 
-            console.log("Database seeded successfully");
-        } catch (error) {
-            console.error("Database seeding error:", error);
+        // Seed sample reviews only if the collection is empty.
+        if (await Reviews.countDocuments() === 0) {
+            await Reviews.insertMany(reviews_data.reviews);
+            console.log('Sample reviews inserted');
         }
-    })
-    .catch((error) => {
-        console.error("MongoDB connection error:", error);
-    });
+
+        // Seed dealerships only if the collection is empty.
+        if (await Dealerships.countDocuments() === 0) {
+            await Dealerships.insertMany(dealerships_data.dealerships);
+            console.log('Sample dealerships inserted');
+        }
+
+        app.listen(port, '0.0.0.0', () => {
+            console.log(`Server is running on port ${port}`);
+        });
+    } catch (error) {
+        console.error('Server startup error:', error);
+        process.exit(1);
+    }
+}
 
 // Home route
 app.get('/', async (req, res) => {
-    res.send("Welcome to the Mongoose API");
+    res.send('Welcome to the Mongoose API');
 });
 
 // Fetch all reviews
@@ -105,7 +117,7 @@ app.get('/fetchDealer/:id', async (req, res) => {
     }
 });
 
-// Insert review with sentiment
+// Insert review
 app.post('/insert_review', async (req, res) => {
     try {
         const data = req.body;
@@ -128,14 +140,10 @@ app.post('/insert_review', async (req, res) => {
 
         const savedReview = await review.save();
         res.json(savedReview);
-
     } catch (error) {
-        console.error("Review insertion error:", error);
+        console.error('Review insertion error:', error);
         res.status(500).json({ error: 'Error inserting review' });
     }
 });
 
-// Start server
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
+startServer();
