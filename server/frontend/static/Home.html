@@ -114,6 +114,71 @@
             </div>
         </div>
     </div>
-
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Available Dealerships</h2>
+  
+      <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+              <thead class="table-dark">
+                  <tr>
+                      <th>ID</th>
+                      <th>Dealer Name</th>
+                      <th>City</th>
+                      <th>Address</th>
+                      <th>Zip</th>
+                      <th>State</th>
+                  </tr>
+              </thead>
+              <tbody id="dealers-list">
+                  <tr>
+                      <td colspan="6">Loading dealerships...</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  
+  <script>
+      async function loadDealers() {
+          const table = document.getElementById("dealers-list");
+  
+          try {
+              const response = await fetch("/djangoapp/dealers");
+              const dealers = await response.json();
+  
+              if (!response.ok || !Array.isArray(dealers)) {
+                  throw new Error("Unable to load dealerships");
+              }
+  
+              table.innerHTML = "";
+  
+              dealers.forEach(dealer => {
+                  const row = document.createElement("tr");
+  
+                  [
+                      dealer.id,
+                      dealer.full_name,
+                      dealer.city,
+                      dealer.address,
+                      dealer.zip,
+                      dealer.state
+                  ].forEach(value => {
+                      const cell = document.createElement("td");
+                      cell.textContent = value ?? "";
+                      row.appendChild(cell);
+                  });
+  
+                  table.appendChild(row);
+              });
+  
+          } catch (error) {
+              table.innerHTML =
+                  '<tr><td colspan="6">Unable to load dealerships.</td></tr>';
+              console.error(error);
+          }
+      }
+  
+      loadDealers();
+  </script>
 </body>
 </html>
