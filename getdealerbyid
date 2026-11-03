@@ -1,0 +1,8 @@
+Task 10: Get Dealer by ID
+
+cURL Command:
+
+curl http://127.0.0.1:8000/djangoapp/dealers/1
+
+Output:
+[{"_id": "6ae8f57fe7dea9bc54ed6eae", "id": 1, "city": "El Paso", "state": "Texas", "address": "3 Nova Court", "zip": "88563", "lat": "31.6948", "long": "-106.3", "short_name": "Holdlamis", "full_name": "Holdlamis Car Dealership", "__v": 0}]
