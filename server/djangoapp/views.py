@@ -1,6 +1,6 @@
 import json
 import logging
-
+from .models import CarMake, CarModel
 from django.http import JsonResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
@@ -160,5 +160,25 @@ def add_review(request):
 
     return JsonResponse(
         {"error": "POST method required"},
+        status=405
+    )
+
+# Get all car makes and models
+def get_cars(request):
+    if request.method == 'GET':
+        car_models = CarModel.objects.select_related('make').all()
+
+        car_data = [
+            {
+                "CarMake": car.make.name,
+                "CarModel": car.name
+            }
+            for car in car_models
+        ]
+
+        return JsonResponse({"CarModels": car_data})
+
+    return JsonResponse(
+        {"error": "GET method required"},
         status=405
     )
