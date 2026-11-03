@@ -1,0 +1,8 @@
+Task 11: Get Dealers by State
+
+cURL Command:
+
+curl "http://127.0.0.1:8000/djangoapp/dealers?state=Kansas"
+
+Output:
+[{"_id": "6ae8f57fe7dea9bc54ed6eb5", "id": 8, "city": "Topeka", "state": "Kansas", "address": "288 Larry Place", "zip": "66642", "lat": "39.0429", "long": "-95.7697", "short_name": "Bytecard", "full_name": "Bytecard Car Dealership", "__v": 0}]
